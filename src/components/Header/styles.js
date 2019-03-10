@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 
 const bgColor = '#fff';
 const fColor = '#333333';
@@ -10,9 +10,19 @@ const styles = StyleSheet.create({
     backgroundColor: bgColor,
     borderBottomWidth: 1,
     borderColor: bColor,
-    height: 50,
     justifyContent: 'center',
     marginBottom: 20,
+
+    ...Platform.select({
+      ios: {
+        height: 76,
+        paddingTop: 20,
+      },
+      android: {
+        height: 56,
+        paddingTop: 0,
+      },
+    }),
   },
   textHeader: {
     color: fColor,
