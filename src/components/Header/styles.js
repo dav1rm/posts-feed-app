@@ -1,7 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 const bgColor = '#fff';
-const fColor = '#1a1a1a';
+const fColor = '#333333';
 const bColor = '#cccc';
 
 const styles = StyleSheet.create({
@@ -10,8 +10,9 @@ const styles = StyleSheet.create({
     backgroundColor: bgColor,
     borderBottomWidth: 1,
     borderColor: bColor,
-    height: 60,
+    height: 50,
     justifyContent: 'center',
+    marginBottom: 20,
   },
   textHeader: {
     color: fColor,
